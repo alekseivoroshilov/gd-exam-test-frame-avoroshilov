@@ -1,0 +1,10 @@
+[
+  {
+    "type": "voroshiloaEmulator",
+    "device.name": "Pixel_3a_XL_API_31",
+    "platform.name": "ANDROID",
+    "app": "/Users/avoroshilov/Downloads/exam.apk",
+    "url": "http://127.0.0.1:4723/wd/hub",
+    "command.timeout": 1200
+  }
+]

@@ -34,7 +34,7 @@ public class BaseClass {
         capabilities.setCapability(MobileCapabilityType.APP, CONFIG.getApp());
 
         try {
-            URL url = new URL("http://127.0.0.1:4723/wd/hub");
+            URL url = new URL(CONFIG.getUrl());
             switch (TEST_PLATFORM) {
                 case IOS -> {
                     driver = new IOSDriver<>(url, capabilities);

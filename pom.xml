@@ -11,10 +11,10 @@
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
-        <aspectj.version>1.8.10</aspectj.version>
-        <selenium-java.version>4.3.0</selenium-java.version>
+        <aspectj.version>1.9.6</aspectj.version>
+        <selenium-java.version>3.141.59</selenium-java.version>
         <allure.version>2.18.1</allure.version>
-        <testng.version>7.6.1</testng.version>
+        <testng.version>7.1.0</testng.version>
         <appium-client.version>7.5.1</appium-client.version>
         <project.reporting.sourceEncoding>UTF-8</project.reporting.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

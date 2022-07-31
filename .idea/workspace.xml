@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e900087b-ab27-409b-bc81-c92b85b50ac8" name="Changes" comment="check repo commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/helpers/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/models/DriverConfigs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/providers/TestDataReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ActionFailedError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/FrameworkFailedError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainPage.java" afterDir="false" />
+    <list default="true" id="e900087b-ab27-409b-bc81-c92b85b50ac8" name="Changes" comment="Base stuff added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/android/MainPageAndroid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/ios/MainPageIos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPagePossibleFeatureCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/android.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/main_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPageElementTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.34827587"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nekob\IdeaProjects\gd-exam-test-frame-avoroshilov\src\test\resources" />
@@ -82,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658613949581</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Base stuff added">
+      <created>1658702839103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658702839103</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check repo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="check repo commit" />
+    <MESSAGE value="Base stuff added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base stuff added" />
   </component>
 </project>
