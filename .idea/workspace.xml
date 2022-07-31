@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e900087b-ab27-409b-bc81-c92b85b50ac8" name="Changes" comment="Base stuff added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/android/MainPageAndroid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/ios/MainPageIos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPagePossibleFeatureCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/android.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/main_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/elements/SettingsPageElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPageElementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config/android.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +35,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.34827587"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\nekob\IdeaProjects\gd-exam-test-frame-avoroshilov\src\test\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,6 +66,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658610089535</updated>
+      <workItem from="1659226602181" duration="1313000" />
+      <workItem from="1659229499270" duration="1508000" />
+      <workItem from="1659284428520" duration="4856000" />
     </task>
     <task id="LOCAL-00001" summary="check repo commit">
       <created>1658613458312</created>
@@ -93,6 +94,9 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -103,6 +107,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check repo commit" />
