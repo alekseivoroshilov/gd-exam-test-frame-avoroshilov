@@ -25,7 +25,7 @@ public class DriverConfigs {
     private String url;
 
     @JsonProperty("command.timeout")
-    private String timeout;
+    private int timeout;
 
     /**
      * that's why we use lombok
@@ -54,7 +54,7 @@ public class DriverConfigs {
         return url;
     }
 
-    public String getTimeout() {
+    public int getTimeout() {
         return timeout;
     }
 }

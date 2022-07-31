@@ -6,6 +6,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.qameta.allure.Muted;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
@@ -22,6 +23,8 @@ import static data.providers.TestDataReader.readConfig;
 public class BaseClass {
     public static AppiumDriver<MobileElement> driver;
     DriverConfigs CONFIG;
+
+    @Muted
     @BeforeTest
     public void setup(){
         CONFIG = readConfig(TEST_PLATFORM);
@@ -32,17 +35,22 @@ public class BaseClass {
         //capabilities.setCapability(MobileCapabilityType.UDID, CONFIG.getUdid()); // I use simulator
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, CONFIG.getTimeout()); // 15 min
         capabilities.setCapability(MobileCapabilityType.APP, CONFIG.getApp());
+        capabilities.setCapability("autoGrantPermissions", "true");
+        capabilities.setCapability("noReset", "true");
+        capabilities.setCapability("appWaitActivity", "com.movinapp.dict.english.american.Dictionary");
 
         try {
             URL url = new URL(CONFIG.getUrl());
             switch (TEST_PLATFORM) {
-                case IOS -> {
+                case IOS : {
                     driver = new IOSDriver<>(url, capabilities);
+                    break;
                 }
-                case ANDROID -> {
+                case ANDROID : {
                     driver = new AndroidDriver<>(url, capabilities);
+                    break;
                 }
-                default -> {
+                default : {
                     driver = new AppiumDriver<>(url, capabilities);
                 }
             }
@@ -53,9 +61,9 @@ public class BaseClass {
         }
     }
 
+    @Muted
     @AfterTest
     public void tearDown(){
-        driver.close();
         driver.quit();
     }
 }

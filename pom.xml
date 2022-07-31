@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <aspectj.version>1.9.6</aspectj.version>
         <selenium-java.version>3.141.59</selenium-java.version>
         <allure.version>2.18.1</allure.version>
@@ -18,10 +18,17 @@
         <appium-client.version>7.5.1</appium-client.version>
         <project.reporting.sourceEncoding>UTF-8</project.reporting.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <allure-maven-plugin-report.version>2.13.6</allure-maven-plugin-report.version>
+        <qameta.allure.plugin.version>2.10.0</qameta.allure.plugin.version>
         <suiteXml>testng.xml</suiteXml>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium-client.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -36,11 +43,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${appium-client.version}</version>
         </dependency>
     </dependencies>
 
@@ -71,6 +73,14 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${qameta.allure.plugin.version}</version>
+                <configuration>
+                    <reportVersion>${allure-maven-plugin-report.version}</reportVersion>
+                </configuration>
             </plugin>
         </plugins>
     </build>

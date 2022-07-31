@@ -17,7 +17,7 @@ public class Constants {
     }
 
     public static final class Configuration {
-        public final static String TEST_PLATFORM = getStringPropertyOrDef(PLATFORM, IOS).toLowerCase();
+        public final static String TEST_PLATFORM = getStringPropertyOrDef(PLATFORM, ANDROID).toLowerCase();
         public final static boolean IS_IOS = TEST_PLATFORM.equals(IOS);
         public final static boolean IS_ANDROID = TEST_PLATFORM.equals(ANDROID);
     }
