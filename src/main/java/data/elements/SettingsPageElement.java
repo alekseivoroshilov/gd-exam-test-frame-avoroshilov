@@ -1,6 +1,6 @@
 package data.elements;
 
-import data.BaseClass;
+import data.BasePage;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import static data.Constants.Locators.ANDROID_ID;
 import static data.Constants.Locators.ID;
 
-public class SettingsPageElement extends BaseClass {
+public abstract class SettingsPageElement extends BasePage {
 
     @AndroidFindBy(id = ANDROID_ID + "home")
     protected WebElement iconHome;

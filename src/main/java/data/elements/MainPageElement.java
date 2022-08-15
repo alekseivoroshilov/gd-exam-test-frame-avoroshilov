@@ -1,13 +1,18 @@
 package data.elements;
 
-import data.BaseClass;
+import data.BasePage;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 
 import static data.Constants.Locators.ANDROID_ID;
 import static data.Constants.Locators.ID;
 
-public class MainPageElement extends BaseClass {
+public abstract class MainPageElement extends BasePage {
+
+    public MainPageElement() {
+        super();
+    }
+
     @AndroidFindBy(id = ID + "edit_text_search")
     protected WebElement fldSearch;
 

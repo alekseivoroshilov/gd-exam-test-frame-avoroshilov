@@ -1,16 +1,18 @@
 package data;
 
+import data.listeners.TestListener;
 import data.models.DriverConfigs;
+import data.pages.AbstractMainPage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.qameta.allure.Muted;
+import io.qameta.allure.internal.shadowed.jackson.databind.ser.Serializers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -21,11 +23,9 @@ import static data.Constants.Devices.IOS;
 import static data.providers.TestDataReader.readConfig;
 
 public class BaseClass {
-    public static AppiumDriver<MobileElement> driver;
+/*    public static AppiumDriver<MobileElement> driver;
     DriverConfigs CONFIG;
 
-    @Muted
-    @BeforeTest
     public void setup(){
         CONFIG = readConfig(TEST_PLATFORM);
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -61,9 +61,9 @@ public class BaseClass {
         }
     }
 
-    @Muted
-    @AfterTest
     public void tearDown(){
         driver.quit();
     }
+    */
+
 }

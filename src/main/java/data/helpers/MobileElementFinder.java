@@ -1,7 +1,9 @@
 package data.helpers;
 
 import data.BaseClass;
+import data.BaseUtil;
 import io.appium.java_client.MobileElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,10 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.function.Function;
 
+import static data.driver.DriverManager.getDriver;
 import static java.lang.Thread.sleep;
 
 
-public class MobileElementFinder extends BaseClass {
+public class MobileElementFinder extends BaseUtil {
+
     private static final boolean DEFAULT_SCROLL_TO_THE_TOP_REQUIRED = true;
 
     public boolean isElementDisplayed(MobileElement element){
@@ -24,8 +28,8 @@ public class MobileElementFinder extends BaseClass {
             return false;
         }
     }
-    public WebElement waitUntilVisibilityOf(MobileElement element, long seconds) {
-        WebDriverWait wait = new WebDriverWait(driver, seconds);
+    public WebElement waitUntilVisibilityOf(WebElement element, long seconds) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), seconds);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -54,6 +58,10 @@ public class MobileElementFinder extends BaseClass {
             sleepInSeconds(10);
             element.click();
         }
+    }
 
+    @Step("usePhoneBackButton")
+    public static void usePhoneBackButton() {
+        getDriver().navigate().back();
     }
 }

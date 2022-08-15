@@ -1,12 +1,17 @@
 package mainPageTests;
 
-import data.BaseClass;
+import data.BaseTest;
+import data.listeners.TestListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class MainPageElementTest extends BaseClass {
+@Listeners(TestListener.class)
+public class MainPageElementTest extends BaseTest {
+
     @Test(description = "Search button, search field check.")
     public void testMainPageElementsPresence() {
+        mainPage.clickSearch();
         System.out.println("The test has started!");
         Assert.assertEquals(true, true);
     }
