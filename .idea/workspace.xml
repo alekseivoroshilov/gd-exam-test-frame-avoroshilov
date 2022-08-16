@@ -5,26 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e900087b-ab27-409b-bc81-c92b85b50ac8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/BaseUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/helpers/ReflectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/listeners/TestListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/PlatformNotSupportedError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/ios.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/env.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractSettingsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/android/SettingsPageAndroid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/pages/ios/SettingsPageIos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mainPage/MainPageElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/app_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/elements/SettingsPageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/elements/SettingsPageElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/android/MainPageAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/pages/android/MainPageAndroid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/ios/MainPageIos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/pages/ios/MainPageIos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPageElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPageElementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/providers/TestDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/TestDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/env.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/env.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPageElementTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mainPageTests/MainPagePossibleFeatureCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPage/MainPagePossibleFeatureCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/suites/main_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suites/main_page.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -71,6 +76,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +87,7 @@
       <recent name="$PROJECT_DIR$/src/test/java/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MainPageElementTest.testMainPageElementsPresence">
+  <component name="RunManager" selected="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/main_page.xml">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -97,12 +103,12 @@
       <module name="gd-exam-test-frame-avoroshilov" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mainPageTests.*" />
+          <option name="PATTERN" value="mainPage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mainPageTests" />
-      <option name="MAIN_CLASS_NAME" value="mainPageTests.MainPageElementTest" />
+      <option name="MAIN_CLASS_NAME" value="mainPage.MainPageElementTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -114,12 +120,12 @@
       <module name="gd-exam-test-frame-avoroshilov" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mainPageTests.*" />
+          <option name="PATTERN" value="mainPage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="mainPageTests" />
-      <option name="MAIN_CLASS_NAME" value="mainPageTests.MainPageElementTest" />
+      <option name="MAIN_CLASS_NAME" value="mainPage.MainPageElementTest" />
       <option name="METHOD_NAME" value="testMainPageElementsPresence" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -128,10 +134,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/app_settings.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="gd-exam-test-frame-avoroshilov" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suites/app_settings.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/main_page.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="gd-exam-test-frame-avoroshilov" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suites/main_page.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MainPageElementTest.testMainPageElementsPresence" />
+        <item itemvalue="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/main_page.xml" />
+        <item itemvalue="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/app_settings.xml" />
         <item itemvalue="TestNG.MainPageElementTest" />
+        <item itemvalue="TestNG.MainPageElementTest.testMainPageElementsPresence" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +176,7 @@
       <workItem from="1659284428520" duration="5339000" />
       <workItem from="1659293664585" duration="1825000" />
       <workItem from="1659296411315" duration="12683000" />
-      <workItem from="1660443792986" duration="14609000" />
+      <workItem from="1660443792986" duration="42705000" />
     </task>
     <task id="LOCAL-00001" summary="check repo commit">
       <created>1658613458312</created>
@@ -185,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659302811689</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finally works">
+      <created>1660529488505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660529488505</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,5 +245,31 @@
     <MESSAGE value="Checkpoint" />
     <MESSAGE value="Finally works" />
     <option name="LAST_COMMIT_MESSAGE" value="Finally works" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/data/BaseTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/data/BaseTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

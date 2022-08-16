@@ -26,6 +26,17 @@ public class PropertiesReader {
         }
     }
 
+    public Boolean getAutoStartServer() {
+        String prop = System.getProperty("autoStartAppiumServer");
+
+        if (Objects.equals(prop, null)) {
+            String property = props.getProperty("autoStartAppiumServer");
+            return property.equals("true");
+        } else {
+            return false;
+        }
+    }
+
     public void load() throws IOException {
         String propertyFileName = "env.properties";
         ClassLoader loader = Thread.currentThread().getContextClassLoader();

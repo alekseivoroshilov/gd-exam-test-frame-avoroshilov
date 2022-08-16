@@ -1,8 +1,8 @@
-package data;
+package data.constants;
 
-import static data.Constants.Devices.ANDROID;
-import static data.Constants.Devices.IOS;
-import static data.Constants.SystemProperties.PLATFORM;
+import static data.constants.Constants.Devices.ANDROID;
+import static data.constants.Constants.Devices.IOS;
+import static data.constants.Constants.SystemProperties.PLATFORM;
 import static data.helpers.Helper.getStringPropertyOrDef;
 
 public class Constants {
@@ -22,9 +22,19 @@ public class Constants {
         public final static boolean IS_ANDROID = TEST_PLATFORM.equals(ANDROID);
     }
 
+    public static final class Paths {
+        public final static String NODE_PATH = "/Users/avoroshilov/.nvm/versions/node/v15.14.0/bin/node";
+        public final static String APPIUM_PATH = "/Users/avoroshilov/.nvm/versions/node/v15.14.0/bin/appium";
+    }
+
     public static final class Locators {
         public final static String ID = "com.movinapp.dict.english.american:id/";
         public final static String ANDROID_ID = "android:id/";
+        public final static String LINEAR_LAYOUT = "/android.widget.LinearLayout";
+        public final static String TEXT_VIEW = "/android.widget.TextView";
+        public final static String RELATIVE_LAYOUT = "/android.widget.RelativeLayout";
+        public final static String LIST_VIEW = "/android.widget.ListView";
+        public final static String CHECKBOX = "/android.widget.CheckBox";
     }
 
     public static final class Texts {
@@ -43,6 +53,13 @@ public class Constants {
         public final static String POPUP_DELETE_FAVS_MSG = "This action will DELETE your current favorites list. Are you sure?";
         public final static String POPUP_OVERWRITE_BACKUP = "This action will overwrite your previous favorites backup. Are you sure?";
         public final static String ABOUT_MSG = "WordNet 3.0 Copyright 2006 by Princeton University. All rights reserved.";
+        public final static String AD_FREE_VERSION = "Ad-free version";
+        public final static String PLEASE_SUPPORT_DEVELOPMENT = "If you like this application, please support its development by upgrading to the ad-free version. Thank you :)\n";
+    }
+
+    public static final class SettingsTexts {
+        public final static String FULL_SEARCH = "Full search";
+        public final static String SEARCH_TYPE = "Search type";
     }
 
     public static final class Words {
@@ -58,5 +75,12 @@ public class Constants {
         public final static String WRONG_WORD = "heyyosupmydawg";
         public final static String ADVERB = "[adv.]";
         public final static String NOUN = "[n.]";
+    }
+    public static final class Pages {
+        public final static String SETTINGS = "Settings";
+    }
+    public static final class TestGroups {
+        public static final String MAIN_PAGE = "main_page";
+        public static final String SETTINGS_PAGE = "settings_page";
     }
 }

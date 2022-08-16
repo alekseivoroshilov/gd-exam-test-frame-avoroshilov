@@ -1,13 +1,11 @@
-package data.providers;
+package data.helpers;
 
 import data.models.DriverConfigs;
 import exceptions.FrameworkFailedError;
 import io.qameta.allure.internal.shadowed.jackson.databind.ObjectMapper;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Objects;
 
 public class TestDataReader {
     public static DriverConfigs readConfig(String platform)  {

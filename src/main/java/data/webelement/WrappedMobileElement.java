@@ -5,11 +5,20 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.*;
 
 
+/**
+ * -------------------------------------------------------------------------------------------
+ * The next methods are created for experiment purpose TODO
+ * Don't try using them :)
+ */
 public class WrappedMobileElement extends MobileElement {
     private MobileElement mobileElement;
     private WebElement webElement;
 
     public WrappedMobileElement() {}
+
+    public WrappedMobileElement(WebElement webElement) {
+        this.webElement = webElement;
+    }
 
     @Override
     public Point getCenter() {

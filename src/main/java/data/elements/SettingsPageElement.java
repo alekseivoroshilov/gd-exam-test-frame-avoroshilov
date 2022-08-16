@@ -6,8 +6,9 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static data.Constants.Locators.ANDROID_ID;
-import static data.Constants.Locators.ID;
+import static data.constants.Constants.Locators.*;
+import static data.constants.Constants.SettingsTexts.FULL_SEARCH;
+import static data.constants.Constants.SettingsTexts.SEARCH_TYPE;
 
 public abstract class SettingsPageElement extends BasePage {
 
@@ -17,11 +18,17 @@ public abstract class SettingsPageElement extends BasePage {
     @AndroidFindBy(id = ANDROID_ID + "action_bar_title")
     protected WebElement txtActionBarTitle;
 
+    @AndroidFindBy(xpath = "/" + RELATIVE_LAYOUT + TEXT_VIEW + "[contains(@text, '" + FULL_SEARCH + "')]")
+    protected WebElement txtFullSearch;
+
+    @AndroidFindBy(xpath = "/" + RELATIVE_LAYOUT + TEXT_VIEW + "[contains(@text, '" + SEARCH_TYPE + "')]")
+    protected WebElement txtSearchType;
+
     @AndroidFindBy(id = ANDROID_ID + "title")
-    protected WebElement txtTitle;
+    protected List<WebElement> txtTitle;
 
     @AndroidFindBy(id = ANDROID_ID + "summary")
-    protected WebElement txtSummary;
+    protected List<WebElement> txtSummary;
 
     @AndroidFindBy(id = ANDROID_ID + "checkbox")
     protected WebElement txtCheckbox;

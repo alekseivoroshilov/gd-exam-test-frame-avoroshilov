@@ -4,6 +4,7 @@ import data.pages.AbstractMainPage;
 import io.appium.java_client.AppiumDriver;
 
 import static data.helpers.MobileElementFinder.usePhoneBackButton;
+import static data.helpers.MobileElementFinder.waitUntilVisibilityOf;
 
 public class MainPageAndroid extends AbstractMainPage {
 
@@ -20,6 +21,6 @@ public class MainPageAndroid extends AbstractMainPage {
     }
 
     public boolean isOpen(){
-        return btnSearch.isDisplayed();
+        return waitUntilVisibilityOf(btnSearch).isDisplayed();
     }
 }
