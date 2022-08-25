@@ -4,7 +4,7 @@
 
 The purpose of this repository is to store my testing framework I created for education and practice using Java.
 
-It is designed to test a specific Android Dictionary app, to which can have the access only course professors and me.
+It is designed to test a specific Android Dictionary app, to which can have access only course professors and me.
 
 This framework satisfies the requirements of patterns:
 
