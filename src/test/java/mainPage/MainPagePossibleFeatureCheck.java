@@ -1,10 +1,10 @@
 package mainPage;
 
-import data.BaseTest;
+import core.page.BaseTest;
 import org.testng.annotations.Test;
 
-import static data.constants.Constants.Words.NOUN;
-import static data.constants.Constants.Words.WORD1;
+import static constants.Constants.Words.NOUN;
+import static constants.Constants.Words.WORD1;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPagePossibleFeatureCheck extends BaseTest {

@@ -1,12 +1,12 @@
 package mainPage;
 
-import data.BaseTest;
-import data.listeners.TestListener;
+import core.page.BaseTest;
+import listeners.TestListener;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import static data.constants.Constants.TestGroups.MAIN_PAGE;
-import static data.constants.Constants.Words.WORD2;
+import static constants.Constants.TestGroups.MAIN_PAGE;
+import static constants.Constants.Words.WORD2;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Listeners(TestListener.class)

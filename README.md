@@ -74,4 +74,4 @@ In case any difficulty while completing pre-setup, I recommend using helpful lin
     - Add Classes here `src/main/java/data/pages`
     - Add a variable in BaseTest class
 4. Add all page related methods to their abstract classes
-5. Add Constants to `src/main/java/data/constants/Constants.java`
+5. Add constants.Constants to `src/main/java/data/constants/Constants.java`

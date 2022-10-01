@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e900087b-ab27-409b-bc81-c92b85b50ac8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/AbstractSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/pages/AbstractSettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/page/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/page/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/BaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/page/BaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/driver/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/driver/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/elements/MainPageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locators/MainPageElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/elements/SettingsPageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locators/SettingsPageElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/MobileElementFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/MobileElementFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/ReflectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/ReflectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/helpers/TestDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/TestDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/listeners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/models/DriverConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/driver/DriverConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/AbstractMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AbstractMainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/AbstractSettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AbstractSettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/android/MainPageAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/android/MainPageAndroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/android/SettingsPageAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/android/SettingsPageAndroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/ios/MainPageIos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ios/MainPageIos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/pages/ios/SettingsPageIos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ios/SettingsPageIos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/webelement/WrappedMobileElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/elements/WrappedMobileElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mainPage/MainPageElementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPage/MainPageElementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mainPage/MainPagePossibleFeatureCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mainPage/MainPagePossibleFeatureCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +88,11 @@
       <recent name="$PROJECT_DIR$/src/test/java/resources/suites" />
       <recent name="$PROJECT_DIR$/src/test/java/resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/main_page.xml">
+  <component name="RunManager" selected="TestNG.AppSettings.testSettingsPageSectionBlocking">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,6 +100,24 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppSettings.testSettingsPageSectionBlocking" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="gd-exam-test-frame-avoroshilov" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="appSettings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="appSettings" />
+      <option name="MAIN_CLASS_NAME" value="appSettings.AppSettings" />
+      <option name="METHOD_NAME" value="testSettingsPageSectionBlocking" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AppSettings.testSettingsPageSectionBlocking" />
         <item itemvalue="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/main_page.xml" />
         <item itemvalue="TestNG./Users/avoroshilov/IdeaProjects/gd-exam-test-frame-avoroshilov/src/test/resources/suites/app_settings.xml" />
         <item itemvalue="TestNG.MainPageElementTest" />
@@ -204,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660529488505</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Edits">
+      <created>1664642548392</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664642548392</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,30 +275,26 @@
     <MESSAGE value="Base stuff added" />
     <MESSAGE value="Checkpoint" />
     <MESSAGE value="Finally works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally works" />
+    <MESSAGE value="Edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/appSettings/AppSettings.java</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/data/BaseTest.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/src/main/java/pages/AbstractSettingsPage.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/data/BaseTest.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="43" />
+          <url>file://$PROJECT_DIR$/src/main/java/helpers/MobileElementFinder.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
