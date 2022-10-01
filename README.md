@@ -71,7 +71,7 @@ In case any difficulty while completing pre-setup, I recommend using helpful lin
 1. Create package and a Class in `src/test/java`
 2. Add suite `src/test/resources/suites/yoursuite.xml`
 3. Adding a pageObject if needed:
-    - Add Classes here `src/main/java/data/pages`
+    - Add Classes here `src/main/java/pages`
     - Add a variable in BaseTest class
 4. Add all page related methods to their abstract classes
-5. Add constants.Constants to `src/main/java/data/constants/Constants.java`
+5. Add constants.Constants to `src/main/java/constants/Constants.java`
