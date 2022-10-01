@@ -8,6 +8,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -26,13 +27,13 @@ import static data.helpers.TestDataReader.readConfig;
 import static java.util.Objects.isNull;
 
 public class DriverManager {
-    private static AppiumDriver driver;
+    private static AppiumDriver<WebElement> driver;
     private static AppiumDriverLocalService server;
     public static DriverConfigs CONFIG;
     public static DesiredCapabilities capabilities;
     public static boolean AUTO_START_APPIUM_SERVER = true;
 
-    public AppiumDriver getInstance(String target) throws IOException, PlatformNotSupportedError {
+    public AppiumDriver<WebElement> getInstance(String target) throws IOException, PlatformNotSupportedError {
         System.out.println("Getting instance of: " + target);
         switch (target) {
             case ANDROID:
@@ -44,13 +45,13 @@ public class DriverManager {
         }
     }
 
-    private AppiumDriver getAndroidDriver() throws IOException {
+    private AppiumDriver<WebElement> getAndroidDriver() throws IOException {
         CONFIG = readConfig(ANDROID);
         setCapabilities();
         return getDriver();
     }
 
-    private AppiumDriver getIOSDriver() throws IOException {
+    private AppiumDriver<WebElement> getIOSDriver() throws IOException {
         CONFIG = readConfig(IOS);
         setCapabilities();
         return getDriver();
@@ -70,7 +71,7 @@ public class DriverManager {
         return capabilities;
     }
 
-    public static AppiumDriver getDriver() {
+    public static AppiumDriver<WebElement> getDriver() {
         if (isNull(driver)) {
             try {
                 if (AUTO_START_APPIUM_SERVER) {
@@ -80,12 +81,12 @@ public class DriverManager {
                     matcher.find();
                     String serverPort = matcher.group(0);
                     URL url = new URL(CONFIG.getUrl().replaceAll("(\\d){4,}", serverPort));
-                    driver = new AppiumDriver(
+                    driver = new AppiumDriver<>(
                             url, capabilities);
                 }
                 else {
                     URL url = new URL(CONFIG.getUrl());
-                    driver = new AppiumDriver(
+                    driver = new AppiumDriver<>(
                             url, capabilities);
                 }
 

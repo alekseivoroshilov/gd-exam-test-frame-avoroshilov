@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 import static java.lang.System.getProperty;
 
-public class Helper {
+public class PropertiesHelper {
     public static <T> T getSysPropOrDefault (String property, T defaultProp, Function<String, T> function) {
         String prop = getProperty(property);
         return prop == null ? defaultProp : function.apply(prop);

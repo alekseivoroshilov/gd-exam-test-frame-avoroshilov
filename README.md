@@ -4,28 +4,53 @@
 
 The purpose of this repository is to store my testing framework I created for education and practice using Java.
 
-It is designed to test a specific Android Dictionary app, to which can have access only course professors and me.
+It is designed to test a specific Android Dictionary app.
 
-This framework satisfies the requirements of patterns:
+This framework satisfies the requirements of the following patterns:
 
 - Page Object
 - Fluent/Chain of Invocations
 - Page Factory
 
-## Current stack of technologies:
+## Plugins and dependencies:
 
 - Appium client 7.5.1
-- Allure plugin 2.10.0
+- Allure 2.18.1
 - TestNG 7.1.0
 - Selenium Java 3.141.59
-
+- AspectJ 1.9.6
 
 ## Pre-setup
+1. brew update
+2. brew install nvm
+3. mkdir ~/.nvm
+4. vim ~/.bash_profile
+5. add lines to ~/.bash_profile ( or ~/.zshrc for macOS Catalina or later) - 
+   - export NVM_DIR=~/.nvm
+   - source $(brew --prefix nvm)/nvm.sh
+6. Press ESC + :wq to save and close your file.
+7. source ~/.bash_profile
+8. nvm install 15.14
+9. xcode-select --install (if you're going to create or use tests for iOS)
+10. npm install -g appium
+11. download last version of Appium GUI using https://github.com/appium/appium-desktop/releases
+12. Install Android Studio
+13. Setup Android SDK throughout Android Studio.
+14. npm install -g uiautomator2
+15. npm install -g appium-doctor
+16. Add lines to profile
+    - export ANDROID_HOME=/usr/local/share/android-sdk
+    - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+    - export JAVA_HOME=/usr/libexec/java_home
+    - export PATH=$PATH:$JAVA_HOME/bin
 
-- Follow setup steps for:
-    - [Common](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/04-common-libraries/)
-    - [Android](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/05-setup-for-android/)
-    - [iOS](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/09-setup-for-ios/)
+17. restart the terminal window
+18. (In your project) brew install git
+
+In case any difficulty while completing pre-setup, I recommend using helpful links below:
+ - [Common](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/04-common-libraries/)
+ - [Android](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/05-setup-for-android/)
+ - [iOS](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/09-setup-for-ios/)
 
 ## Usage
 

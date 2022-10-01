@@ -3,7 +3,7 @@ package data.constants;
 import static data.constants.Constants.Devices.ANDROID;
 import static data.constants.Constants.Devices.IOS;
 import static data.constants.Constants.SystemProperties.PLATFORM;
-import static data.helpers.Helper.getStringPropertyOrDef;
+import static data.helpers.PropertiesHelper.getStringPropertyOrDef;
 
 public class Constants {
 

@@ -23,25 +23,25 @@ public abstract class AbstractMainPage extends MainPageElement {
 
     public abstract AbstractMainPage open();
 
-    @Step("clickSearch")
+    @Step("When I click search")
     public AbstractMainPage clickSearch() {
         waitUntilVisibilityOf(btnSearch, 9).click();
         return this;
     }
 
-    @Step("sendKeysToField")
+    @Step("When I send Keys to Field")
     public AbstractMainPage sendKeysToField(String text) {
         waitUntilVisibilityOf(fldSearch, 9);
         fldSearch.sendKeys(text);
         return this;
     }
 
-    @Step("getAmountOfSearchResults")
+    @Step("When I get an amount of search results")
     public Integer getAmountOfSearchResults() {
         return resultList.size();
     }
 
-    @Step("addWordsWithPartsOfSpeechToFavs")
+    @Step("When I add words with parts of speech to Favorites")
     public AbstractMainPage addWordsWithPartsOfSpeechToFavs(String partOfSpeech) {
         for (int i = 0; i < resultListOfLabels.size(); i++) {
             if (resultListOfLabels.get(i).getText().contains(partOfSpeech)) {
@@ -51,7 +51,7 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
-    @Step("verifyWordsWithSinglePartOfSpeechInFavs")
+    @Step("Then I verify words with a single part of speech in Favorites list")
     public AbstractMainPage verifyWordsWithSinglePartOfSpeechInFavs(String partOfSpeech) {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(resultListOfLabels.size() != 0,
@@ -64,13 +64,13 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
-    @Step("clearSearch")
+    @Step("When I tap on Clear Search")
     public AbstractMainPage clearSearch() {
         click(btnClear);
         return this;
     }
 
-    @Step("verifyMainPageElementsPresence")
+    @Step("Then I verify MainPage Elements presence")
     public AbstractMainPage verifyMainPageElementsPresence() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(iconDictionary.isDisplayed());
@@ -82,13 +82,13 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
-    @Step("clickRateApp")
+    @Step("When I Click on RateApp button")
     public AbstractMainPage clickRateApp() {
         btnLike.click();
         return this;
     }
 
-    @Step("verifyRateAppPopUpElements")
+    @Step("Then I Verify elements inside RateApp Pop-up")
     public AbstractMainPage verifyRateAppPopUpElements() {
         if (isNotDisplayed(txtAdFree) && isNotDisplayed(txtPleaseSupport)) {
             usePhoneBackButton();
@@ -107,19 +107,19 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
-    @Step("openSettingsPage")
+    @Step("When I open settings page")
     public AbstractSettingsPage openSettingsPage() {
         click(waitUntilVisibilityOf(btnSettings));
         return AbstractSettingsPage.getInstance();
     }
 
-    @Step("openKebabMenu")
+    @Step("When I open kebab-menu")
     public AbstractMainPage openKebabMenu() {
         waitUntilVisibilityOf(btnMoreOptions).click();
         return this;
     }
 
-    @Step("clearFavorites")
+    @Step("When I Clear favorites list")
     public AbstractMainPage clearFavorites() {
         if (!isOpen())
             usePhoneBackButton();
@@ -130,7 +130,7 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
-    @Step("clearHistory")
+    @Step("When I Clear history")
     public AbstractMainPage clearHistory() {
         if (!isOpen())
             usePhoneBackButton();

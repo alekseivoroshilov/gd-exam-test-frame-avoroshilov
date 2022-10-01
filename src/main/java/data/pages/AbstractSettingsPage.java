@@ -28,7 +28,7 @@ public class AbstractSettingsPage extends SettingsPageElement {
         return AbstractMainPage.getInstance();
     }
 
-    @Step("verifySettingsPageElements")
+    @Step("Then I verify Settings Page elements")
     public AbstractSettingsPage verifySettingsPageElements() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(txtFullSearch.isDisplayed(), "Element " + FULL_SEARCH + " not displayed");
