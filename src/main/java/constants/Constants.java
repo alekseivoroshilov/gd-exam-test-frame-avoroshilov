@@ -65,15 +65,10 @@ public class Constants {
     }
 
     public static final class Words {
-        public final static String WORD1 = "perpetual";
-        public final static String WORD2 = "ubiquitous";
-        public final static String WORD3 = "marvelous";
-        public final static String WORD4 = "grid";
-        public final static String WORD5 = "dynamics";
-        public final static String WORD6 = "please";
-        public final static String WORD7 = "accept";
-        public final static String WORD8 = "my";
-        public final static String WORD9 = "frame";
+        public final static String WORD_PERPETUAL = "perpetual";
+        public final static String WORD_UBIQUITOUS = "ubiquitous";
+        public final static String WORD_MARVELOUS = "marvelous";
+        public final static String WORD_GRID = "grid";
         public final static String WRONG_WORD = "heyyosupmydawg";
         public final static String ADVERB = "[adv.]";
         public final static String NOUN = "[n.]";

@@ -10,7 +10,7 @@ import static constants.Constants.TestGroups.SETTINGS_PAGE;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Listeners(TestListener.class)
-public class AppSettings extends BaseTest {
+public class AppSettingsTest extends BaseTest {
 
     @Test(groups = {SETTINGS_PAGE}, description = "transition between Main Page and Settings Page")
     public void testVisitSettingsPageAndBackToMainMenu() {

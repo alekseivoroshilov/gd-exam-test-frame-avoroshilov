@@ -7,8 +7,7 @@ import io.qameta.allure.Step;
 import org.testng.asserts.SoftAssert;
 
 import static constants.Constants.Configuration.IS_IOS;
-import static constants.Constants.Texts.AD_FREE_VERSION;
-import static constants.Constants.Texts.PLEASE_SUPPORT_DEVELOPMENT;
+import static constants.Constants.Texts.*;
 import static helpers.MobileElementFinder.*;
 
 public abstract class AbstractMainPage extends MainPageElement {
@@ -70,14 +69,47 @@ public abstract class AbstractMainPage extends MainPageElement {
         return this;
     }
 
+    @Step("When I Click on Share application button")
+    public AbstractMainPage clickShareApp() {
+        btnKebabShareApplication.click();
+        return this;
+    }
+
+    @Step("When I Click on About button")
+    public AbstractMainPage openAboutApp() {
+        openKebabMenu();
+        btnKebabAbout.click();
+        return this;
+    }
+
     @Step("Then I verify MainPage Elements presence")
     public AbstractMainPage verifyMainPageElementsPresence() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(iconDictionary.isDisplayed());
-        softAssert.assertTrue(btnLike.isDisplayed());
-        softAssert.assertTrue(btnSettings.isDisplayed());
-        softAssert.assertTrue(btnMoreOptions.isDisplayed());
-        softAssert.assertTrue(txtActionBarTitle.isDisplayed());
+        softAssert.assertTrue(iconDictionary.isDisplayed(), "Icon is not present");
+        softAssert.assertTrue(btnLike.isDisplayed(), "Like button is not present");
+        softAssert.assertTrue(btnSettings.isDisplayed(), "Settings button is not present");
+        softAssert.assertTrue(btnMoreOptions.isDisplayed(), "More Options button is not present");
+        softAssert.assertTrue(txtActionBarTitle.isDisplayed(), "Action Bar Title is not present");
+        softAssert.assertAll();
+        return this;
+    }
+
+    @Step("Then I verify Share App menu's Elements presence")
+    public AbstractMainPage verifyShareAppChooserElements() {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(txtShareAppContentPreviewText.isDisplayed(), "App link is not present");
+        softAssert.assertTrue(txtChooserHeader.isDisplayed(), "App Header is not present");
+        softAssert.assertAll();
+        return this;
+    }
+
+    @Step("Then I verify About App menu's Elements presence")
+    public AbstractMainPage verifyAboutAppElements() {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(txtAboutAppTitle.getText().contains(STARTUP_TITLE_POPUP), "About app title is not present");
+        softAssert.assertTrue(txtAboutAppText.getText().contains(ABOUT_MSG), "About app text is not present");
+        softAssert.assertTrue(txtAboutAppLink.isDisplayed(), "About app link is not present");
+        softAssert.assertTrue(txtAboutAppVersion.isDisplayed(), "About app version is not present");
         softAssert.assertAll();
         return this;
     }

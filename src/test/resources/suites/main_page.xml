@@ -11,8 +11,14 @@
     <test name="Test main page elements interaction">
         <parameter name="emailid" value="tester789@gmail.com"/>
         <classes>
-            <class name="mainPage.MainPagePossibleFeatureCheck"/>
+            <class name="mainPage.MainPageFavoritesFeatureTest"/>
         </classes>
+    </test>
 
+    <test name="Test main page search">
+        <parameter name="emailid" value="tester789@gmail.com"/>
+        <classes>
+            <class name="mainPage.MainPageSearchTest"/>
+        </classes>
     </test>
 </suite>

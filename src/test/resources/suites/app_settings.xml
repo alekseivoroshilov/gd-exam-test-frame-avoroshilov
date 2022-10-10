@@ -3,7 +3,7 @@
 <suite name="app_settings">
     <test name="Test settings page elements presence">
         <classes>
-            <class name="appSettings.AppSettings"/>
+            <class name="appSettings.AppSettingsTest"/>
         </classes>
     </test>
 </suite>

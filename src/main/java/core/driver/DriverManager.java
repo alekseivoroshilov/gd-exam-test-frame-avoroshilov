@@ -32,6 +32,7 @@ public class DriverManager {
     public static DriverConfigs CONFIG;
     public static DesiredCapabilities capabilities;
     public static boolean AUTO_START_APPIUM_SERVER = true;
+    public static String bundleId = "";
 
     public AppiumDriver<WebElement> getInstance(String target) throws IOException, PlatformNotSupportedError {
         System.out.println("Getting instance of: " + target);
@@ -59,11 +60,12 @@ public class DriverManager {
 
     private DesiredCapabilities setCapabilities() {
         capabilities = new DesiredCapabilities();
+        bundleId = CONFIG.getBundleId() == null ? "" : CONFIG.getBundleId();
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, CONFIG.getPlatformName());
         //capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, CONFIG.getDeviceName());
         //capabilities.setCapability(MobileCapabilityType.UDID, CONFIG.getUdid()); // I use simulator
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, CONFIG.getTimeout()); // 15 min
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, CONFIG.getTimeout());
         capabilities.setCapability(MobileCapabilityType.APP, CONFIG.getApp());
         capabilities.setCapability("autoGrantPermissions", "true");
         capabilities.setCapability("noReset", "true");
@@ -89,7 +91,7 @@ public class DriverManager {
                     driver = new AppiumDriver<>(
                             url, capabilities);
                 }
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -104,24 +106,11 @@ public class DriverManager {
     }
 
     @Step("closeApp")
-    public static void closeApp() { //TODO Check if app closed
-        int closeRetries = 10;
-        while (closeRetries-- != 0) {
-            try {
-                terminateApp("");
-                break;
-            } catch (WebDriverException exception) {
-                exception.printStackTrace();
-            }
-        }
-    }
-
-    @Step("terminateApp")
-    public static boolean terminateApp(String bungleId) {
+    public static void closeApp() {
         try {
-            return getDriver().terminateApp(bungleId);
-        } catch (Exception e) {
-            return false;
+            getDriver().terminateApp(bundleId);
+        } catch (WebDriverException exception) {
+            exception.printStackTrace();
         }
     }
 

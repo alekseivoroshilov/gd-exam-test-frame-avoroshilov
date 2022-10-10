@@ -39,13 +39,20 @@ This framework satisfies the requirements of the following patterns:
 14. npm install -g uiautomator2
 15. npm install -g appium-doctor
 16. Add lines to profile
-    - export ANDROID_HOME=/usr/local/share/android-sdk
+    - (you can get ANDROID_HOME by opening Android Studio -> Preferences -> Android SDK -> Android SDK Location) 
+      - export ANDROID_HOME=/usr/local/share/android-sdk
     - export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
     - export JAVA_HOME=/usr/libexec/java_home
     - export PATH=$PATH:$JAVA_HOME/bin
 
 17. restart the terminal window
 18. (In your project) brew install git
+19. Open the current project 
+    - visit `src/main/java/constants/Constants.java`
+    - Find the `Paths` class
+    - Set the paths for APPIUM_PATH and NODE_PATH after running following commands:
+      - `which node`
+      - `which appium`
 
 In case any difficulty while completing pre-setup, I recommend using helpful links below:
  - [Common](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/04-common-libraries/)
@@ -57,14 +64,15 @@ In case any difficulty while completing pre-setup, I recommend using helpful lin
 1. Open `src/main/resources/config`
     - If you want to run tests for Android, fill the desired capabilities for `android.json`
     - If iOS,  fill the desired capabilities for `iOS.json`
-2. Open `src/test/resources/allure.properties`
+2. Open `src/main/resources/env.properties`
 3. Edit the parameters according to your plans:
     - for _target_ write `android` or `ios` , which means the platform this framework will select for testing
     - for _autoStartAppiumServer_ write `true` of `false`, which means whether you want server starting by itself or the framework uses the port from configuration in `android.json` or `ios.json`
 4. Maven(top-right corner) -> Plugins -> clean -> double tap **clean:clean**
 5. Click on the right mouse button on any of the suites in `src/test/resources/suites` and select **Run**.
 6. Maven(top-right corner) -> Plugins -> allure -> double tap **allure:report**
-7. Find `index.html` in `target` folder and open it from IDE using chrome to see allure report.
+7. Find `index.html` in `target` folder and open it from IDE using chrome to see allure report
+8. Complete step 19 at the Setup section above
 
 ## Test creation
 

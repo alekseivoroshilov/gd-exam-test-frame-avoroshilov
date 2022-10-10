@@ -1,30 +1,31 @@
 package mainPage;
 
 import core.page.BaseTest;
-import listeners.TestListener;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static constants.Constants.TestGroups.MAIN_PAGE;
-import static constants.Constants.Words.WORD2;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@Listeners(TestListener.class)
 public class MainPageElementTest extends BaseTest {
-
-    @Test(groups = {MAIN_PAGE}, description = "Search button, search field check.")
-    public void testSearchFeature() {
-        assertThat(mainPage.sendKeysToField(WORD2)
-                .clickSearch()
-                .getAmountOfSearchResults())
-                .describedAs("None word found by search")
-                .isNotZero();
-    }
 
     @Test(groups = {MAIN_PAGE}, description = "Some elements check")
     public void testMainPageElements() {
         mainPage.verifyMainPageElementsPresence()
                 .clickRateApp()
                 .verifyRateAppPopUpElements();
+    }
+
+    @Test(groups = {}, description = "Share app chooser")
+    public void testMainPageShareApp() {
+        mainPage.openKebabMenu()
+                .clickShareApp()
+                .verifyShareAppChooserElements();
+    }
+
+    @Test(groups = {}, description = "Share app chooser")
+    public void testMainPageAbout() {
+        mainPage.openAboutApp()
+                .verifyAboutAppElements();
+
     }
 }

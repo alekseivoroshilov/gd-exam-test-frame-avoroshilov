@@ -122,6 +122,21 @@ public abstract class MainPageElement extends BasePage {
     @AndroidFindBy(xpath = "/" + TEXT_VIEW + "[contains(@text, 'Restore favorites\n')]")
     protected WebElement btnRestoreFavs;
 
+    @AndroidFindBy(id = ANDROID_ID + "content_preview_text")
+    protected WebElement txtShareAppContentPreviewText;
+
+    @AndroidFindBy(xpath =  "/" + LINEAR_LAYOUT + TEXT_VIEW + "[1]")
+    protected WebElement txtAboutAppTitle;
+
+    @AndroidFindBy(xpath =  "/" + LINEAR_LAYOUT + TEXT_VIEW + "[2]")
+    protected WebElement txtAboutAppText;
+
+    @AndroidFindBy(id = "com.movinapp.dict.english.american:id/text_link")
+    protected WebElement txtAboutAppLink;
+
+    @AndroidFindBy(id = "com.movinapp.dict.english.american:id/app_version")
+    protected WebElement txtAboutAppVersion;
+
     protected WebElement btnAddToFavs(int id) {
         return findElement(MobileBy.xpath(
                 format("/" + LIST_VIEW + LINEAR_LAYOUT + "[%d]" + CHECKBOX, id + 1)));

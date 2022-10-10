@@ -27,6 +27,9 @@ public class DriverConfigs {
     @JsonProperty("command.timeout")
     private int timeout;
 
+    @JsonProperty("bundleId")
+    private String bundleId;
+
     /**
      * that's why we use lombok
      */
@@ -57,4 +60,6 @@ public class DriverConfigs {
     public int getTimeout() {
         return timeout;
     }
+
+    public String getBundleId() { return bundleId; }
 }

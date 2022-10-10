@@ -4,5 +4,6 @@
   "platform.name": "Android",
   "app": "/Users/avoroshilov/Downloads/exam.apk",
   "url": "http://127.0.0.1:4723/wd/hub",
+  "bundleId": "",
   "command.timeout": 1200
 }
