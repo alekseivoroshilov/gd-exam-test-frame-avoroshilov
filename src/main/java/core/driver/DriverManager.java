@@ -67,7 +67,9 @@ public class DriverManager {
         //capabilities.setCapability(MobileCapabilityType.UDID, CONFIG.getUdid()); // I use simulator
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, CONFIG.getTimeout());
         capabilities.setCapability(MobileCapabilityType.APP, CONFIG.getApp());
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, CONFIG.getAutomationName());
         capabilities.setCapability("autoGrantPermissions", "true");
+        capabilities.setCapability("autoAcceptAlerts",true);
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("appWaitActivity", "com.movinapp.dict.english.american.Dictionary");
         return capabilities;
@@ -91,7 +93,6 @@ public class DriverManager {
                     driver = new AppiumDriver<>(
                             url, capabilities);
                 }
-                // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -101,14 +102,10 @@ public class DriverManager {
         return driver;
     }
 
-    public static void tearDown() {
-        driver.quit();
-    }
-
     @Step("closeApp")
     public static void closeApp() {
         try {
-            getDriver().terminateApp(bundleId);
+            driver.quit();
         } catch (WebDriverException exception) {
             exception.printStackTrace();
         }

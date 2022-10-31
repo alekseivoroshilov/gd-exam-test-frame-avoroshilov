@@ -3,7 +3,8 @@
   "device.name": "Pixel_XL_API_31",
   "platform.name": "Android",
   "app": "/Users/avoroshilov/Downloads/exam.apk",
-  "url": "http://127.0.0.1:4723/wd/hub",
-  "bundleId": "",
+  "url": "http://127.0.0.1:4723/",
+  "bundleId": "com.movinapp.dict.english.american",
+  "automationName": "uiautomator2",
   "command.timeout": 1200
 }

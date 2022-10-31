@@ -30,6 +30,9 @@ public class DriverConfigs {
     @JsonProperty("bundleId")
     private String bundleId;
 
+    @JsonProperty("automationName")
+    private String automationName;
+
     /**
      * that's why we use lombok
      */
@@ -62,4 +65,6 @@ public class DriverConfigs {
     }
 
     public String getBundleId() { return bundleId; }
+
+    public String getAutomationName() { return automationName; }
 }

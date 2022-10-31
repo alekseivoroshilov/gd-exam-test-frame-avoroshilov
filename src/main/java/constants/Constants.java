@@ -79,5 +79,6 @@ public class Constants {
     public static final class TestGroups {
         public static final String MAIN_PAGE = "main_page";
         public static final String SETTINGS_PAGE = "settings_page";
+        public static final String FULL_REINSTALL = "full_reinstall";
     }
 }

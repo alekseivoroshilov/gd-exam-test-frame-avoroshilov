@@ -1,7 +1,11 @@
 package core.page;
 
 import core.driver.DriverManager;
+import exceptions.AppInstallationError;
 import helpers.PropertiesReader;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.AbstractMainPage;
 import pages.AbstractSettingsPage;
 import exceptions.PlatformNotSupportedError;
@@ -12,9 +16,9 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 
+import static constants.Constants.Configuration.IS_ANDROID;
 import static constants.Constants.SettingsTexts.ENABLE_SPEECH;
-import static constants.Constants.TestGroups.MAIN_PAGE;
-import static constants.Constants.TestGroups.SETTINGS_PAGE;
+import static constants.Constants.TestGroups.*;
 import static core.driver.DriverManager.*;
 import static helpers.ReflectionUtils.invokeFields;
 
@@ -42,6 +46,23 @@ public abstract class BaseTest {
             e.printStackTrace();
         }
         invokePagesIfNeeded(mainPage, driver);
+    }
+
+    @Muted
+    @BeforeMethod(onlyForGroups = FULL_REINSTALL)
+    public void reinstallApp() {
+        AppiumDriver driver = getDriver();
+        try {
+            if (driver.isAppInstalled(CONFIG.getBundleId()))
+                driver.removeApp(CONFIG.getBundleId());
+            driver.installApp(CONFIG.getApp());
+            if(IS_ANDROID)
+                driver.findElement(By.xpath(".//android.widget.Button[@text='Continue']")).click();
+            else
+                driver.findElement(By.id("Allow")).click();
+        } catch (Throwable e) {
+            throw new AppInstallationError("Can't reinstall app.", e);
+        }
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -73,7 +94,7 @@ public abstract class BaseTest {
 
     @AfterSuite(alwaysRun = true)
     public void afterSuite() {
-        tearDown();
+        closeApp();
         if (AUTO_START_APPIUM_SERVER)
             stopAppiumServer();
     }

@@ -3,6 +3,7 @@ package mainPage;
 import core.page.BaseTest;
 import org.testng.annotations.Test;
 
+import static constants.Constants.TestGroups.FULL_REINSTALL;
 import static constants.Constants.TestGroups.MAIN_PAGE;
 import static constants.Constants.Words.WORD_UBIQUITOUS;
 import static constants.Constants.Words.WRONG_WORD;
@@ -19,7 +20,7 @@ public class MainPageSearchTest extends BaseTest {
                 .isNotZero();
     }
 
-    @Test(groups = {MAIN_PAGE}, description = "Wrong word zero results check")
+    @Test(groups = {FULL_REINSTALL}, description = "Wrong word zero results check")
     public void testSearchWrongWord() {
         assertThat(mainPage.sendKeysToField(WRONG_WORD)
                 .clickSearch()

@@ -17,6 +17,7 @@
 
     <test name="Test main page search">
         <parameter name="emailid" value="tester789@gmail.com"/>
+        <parameter name="devicePlatform" value="android fullReset"/>
         <classes>
             <class name="mainPage.MainPageSearchTest"/>
         </classes>
