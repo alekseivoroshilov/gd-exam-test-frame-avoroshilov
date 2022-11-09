@@ -20,6 +20,7 @@ import static constants.Constants.Configuration.IS_ANDROID;
 import static constants.Constants.SettingsTexts.ENABLE_SPEECH;
 import static constants.Constants.TestGroups.*;
 import static core.driver.DriverManager.*;
+import static helpers.MobileElementFinder.waitUntilVisibilityOf;
 import static helpers.ReflectionUtils.invokeFields;
 
 public abstract class BaseTest {
@@ -55,9 +56,12 @@ public abstract class BaseTest {
         try {
             if (driver.isAppInstalled(CONFIG.getBundleId()))
                 driver.removeApp(CONFIG.getBundleId());
-            driver.installApp(CONFIG.getApp());
-            if(IS_ANDROID)
-                driver.findElement(By.xpath(".//android.widget.Button[@text='Continue']")).click();
+            driver.launchApp();
+            if (IS_ANDROID) {
+                waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+                waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+                waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+            }
             else
                 driver.findElement(By.id("Allow")).click();
         } catch (Throwable e) {
