@@ -1,6 +1,7 @@
 package pages;
 
 import locators.MainPageElement;
+import org.openqa.selenium.WebElement;
 import pages.android.MainPageAndroid;
 import pages.ios.MainPageIos;
 import io.qameta.allure.Step;
@@ -55,7 +56,7 @@ public abstract class AbstractMainPage extends MainPageElement {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(resultListOfLabels.size() != 0,
                 "There are no results with part of speech: " + partOfSpeech);
-        for (org.openqa.selenium.WebElement resultListOfLabel : resultListOfLabels) {
+        for (WebElement resultListOfLabel : resultListOfLabels) {
             softAssert.assertTrue(resultListOfLabel.getText().contains(partOfSpeech),
                     resultListOfLabel.getText() + " does not contain - " + partOfSpeech);
         }
@@ -141,7 +142,7 @@ public abstract class AbstractMainPage extends MainPageElement {
 
     @Step("When I open settings page")
     public AbstractSettingsPage openSettingsPage() {
-        click(waitUntilVisibilityOf(btnSettings));
+        click(btnSettings);
         return AbstractSettingsPage.getInstance();
     }
 

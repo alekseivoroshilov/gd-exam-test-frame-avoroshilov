@@ -21,7 +21,7 @@ import static java.time.Duration.ofMillis;
 
 public class MobileElementFinder extends BaseUtil {
 
-    private static final int DEFAULT_WAIT_UNTIL_VISIBILITY_TIME_IN_SECONDS = 10;
+    private static final int DEFAULT_WAIT_UNTIL_VISIBILITY_TIME_IN_SECONDS = 15;
     private static final int DEFAULT_ATTEMPTS_NUMBER = 2;
     private static final int DEFAULT_PIXELS_SCROLL_NUMBER = 60;
 
@@ -44,8 +44,7 @@ public class MobileElementFinder extends BaseUtil {
     }
 
     public static WebElement waitUntilVisibilityOf(WebElement element, long seconds) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), seconds);
-        return wait.until(ExpectedConditions.visibilityOf(element));
+        return new WebDriverWait(getDriver(), seconds).until(ExpectedConditions.visibilityOf(element));
     }
 
     public static WebElement waitUntilVisibilityOf(WebElement element) {

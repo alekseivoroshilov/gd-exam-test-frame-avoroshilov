@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Listeners(TestListener.class)
 public class AppSettingsTest extends BaseTest {
 
-    @Test(groups = {SETTINGS_PAGE}, description = "transition between Main Page and Settings Page")
+    @Test(groups = {}, description = "transition between Main Page and Settings Page")
     public void testVisitSettingsPageAndBackToMainMenu() {
         assertThat(mainPage.openSettingsPage()
                 .isOpen())
@@ -24,7 +24,7 @@ public class AppSettingsTest extends BaseTest {
                 .isTrue();
     }
 
-    @Test(groups = {SETTINGS_PAGE}, description = "Settings Page elements test")
+    @Test(groups = {}, description = "Settings Page elements test")
     public void testSettingsPageElementsPresence() {
         assertThat(mainPage.openSettingsPage()
                 .isOpen())
@@ -33,7 +33,7 @@ public class AppSettingsTest extends BaseTest {
         settingsPage.verifySettingsPageElements();
     }
 
-    @Test(groups = {SETTINGS_PAGE}, description = "Settings page disabled section check")
+    @Test(groups = {}, description = "Settings page disabled section check")
     public void testSettingsPageSectionBlocking() {
         mainPage.openSettingsPage()
                 .verifySpeechSectionIsBlocked()

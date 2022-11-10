@@ -54,9 +54,12 @@ public abstract class BaseTest {
     public void reinstallApp() {
         AppiumDriver driver = getDriver();
         try {
+            /*
             if (driver.isAppInstalled(CONFIG.getBundleId()))
                 driver.removeApp(CONFIG.getBundleId());
             driver.launchApp();
+            */
+
             if (IS_ANDROID) {
                 waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
                 waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
@@ -71,7 +74,15 @@ public abstract class BaseTest {
 
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod() {
-        launchApp(1);
+        invokePagesIfNeeded(mainPage, driver);
+        launchApp(2);
+        if (IS_ANDROID) {
+            waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+            waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+            waitUntilVisibilityOf(driver.findElement(By.xpath("//android.widget.Button[@text='OK']"))).click();
+        }
+        else
+            driver.findElement(By.id("Allow")).click();
     }
 
     @Muted
@@ -98,7 +109,7 @@ public abstract class BaseTest {
 
     @AfterSuite(alwaysRun = true)
     public void afterSuite() {
-        closeApp();
+        closeSession();
         if (AUTO_START_APPIUM_SERVER)
             stopAppiumServer();
     }

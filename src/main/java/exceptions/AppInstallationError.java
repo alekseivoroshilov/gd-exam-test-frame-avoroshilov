@@ -1,6 +1,6 @@
 package exceptions;
 
-public class AppInstallationError extends Error{
+public class AppInstallationError extends Error {
     public AppInstallationError(String msg) {
         super(msg);
     }

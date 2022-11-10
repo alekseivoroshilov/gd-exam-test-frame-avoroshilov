@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 import static constants.Constants.Locators.*;
+import static constants.Constants.Pages.SETTINGS;
 import static constants.Constants.SettingsTexts.FULL_SEARCH;
 import static constants.Constants.SettingsTexts.SEARCH_TYPE;
 import static helpers.MobileElementFinder.findElement;
@@ -19,7 +20,7 @@ public abstract class SettingsPageElement extends BasePage {
     @AndroidFindBy(id = ANDROID_ID + "home")
     protected WebElement iconHome;
 
-    @AndroidFindBy(id = ANDROID_ID + "action_bar_title")
+    @AndroidFindBy(xpath = "/" + LINEAR_LAYOUT + TEXT_VIEW + "[contains(@text, '" + SETTINGS + "')]")
     protected WebElement txtActionBarTitle;
 
     @AndroidFindBy(xpath = "/" + RELATIVE_LAYOUT + TEXT_VIEW + "[contains(@text, '" + FULL_SEARCH + "')]")

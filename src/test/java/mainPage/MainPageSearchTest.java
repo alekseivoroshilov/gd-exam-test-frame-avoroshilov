@@ -20,7 +20,7 @@ public class MainPageSearchTest extends BaseTest {
                 .isNotZero();
     }
 
-    @Test(groups = {FULL_REINSTALL}, description = "Wrong word zero results check")
+    @Test(groups = {MAIN_PAGE}, description = "Wrong word zero results check")
     public void testSearchWrongWord() {
         assertThat(mainPage.sendKeysToField(WRONG_WORD)
                 .clickSearch()

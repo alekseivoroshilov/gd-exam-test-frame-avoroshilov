@@ -70,8 +70,9 @@ public class DriverManager {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, CONFIG.getAutomationName());
         capabilities.setCapability("autoGrantPermissions", "true");
         capabilities.setCapability("autoAcceptAlerts",true);
-        capabilities.setCapability("noReset", "true");
+        //capabilities.setCapability("noReset", "true");
         capabilities.setCapability("appWaitActivity", "com.movinapp.dict.english.american.Dictionary");
+        capabilities.setCapability("fullReset", true);
         return capabilities;
     }
 
@@ -94,6 +95,8 @@ public class DriverManager {
                             url, capabilities);
                 }
 
+                driver.manage().timeouts().implicitlyWait(CONFIG.getTimeout(), TimeUnit.MILLISECONDS);
+
             } catch (MalformedURLException e) {
                 e.printStackTrace();
                 stopAppiumServer();
@@ -104,6 +107,15 @@ public class DriverManager {
 
     @Step("closeApp")
     public static void closeApp() {
+        try {
+            driver.terminateApp(CONFIG.getApp());
+        } catch (WebDriverException exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    @Step("closeSession")
+    public static void closeSession() {
         try {
             driver.quit();
         } catch (WebDriverException exception) {
